@@ -1,0 +1,1 @@
+{"M": 3, "verbose": false, "n_samples": 40000, "test_3_in_9": false, "double_frame": true, "ortho_sampling": true, "rms_measure_noise": 0.1, "phs_drift_step_deg": 2.0, "dither_range_deg": 30, "net_config": "3x3"}
