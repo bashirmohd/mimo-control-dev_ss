@@ -163,3 +163,4 @@ Model successfully quantized. Evaluating quantized model...
 [33/43] train_loss: 10.61 deg, valid_loss: 10.61 deg, lr: 0.00002
 [34/43] train_loss: 10.61 deg, valid_loss: 10.61 deg, lr: 0.00000
 [35/43] train_loss: 10.61 deg, valid_loss: 10.61 deg, lr: 0.00000
+[36/43] train_loss: 10.61 deg, valid_loss: 10.61 deg, lr: 0.00000
