@@ -33,7 +33,7 @@ $(PTH_3BY3): $(SRC)
 	@echo "Training 8 beam combining on 3x3 DOE"
 	@echo "##################################################"
 	mkdir -p nn_trained
-	python3 trainCNN.py -m 3 --n_samples=40000 --n_epochs=40 \
+	python3 trainCNN.py -m 3 --n_samples=40000 --n_epochs=3 \
 			--dither_range_deg=$(DITHER_RANGE_DEG) \
 			--net_config=3x3 \
 			--weight=$@ \

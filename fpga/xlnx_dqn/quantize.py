@@ -26,6 +26,8 @@ def quantize(dataset, model, weight, dim, double_frame, quant_mode, batchsize, q
     model = torch.load(weight, map_location=device)
     print(model)
 
+    print("QUANT_MODE: ", quant_mode)
+
     # override batchsize if in test mode
     if quant_mode == 'test':
         batchsize = 1
@@ -40,7 +42,12 @@ def quantize(dataset, model, weight, dim, double_frame, quant_mode, batchsize, q
         # debatable
         b = 242
 
-    rand_in = torch.randn([batchsize, b])
+    #rand_in = torch.randn([batchsize, b])
+    rand_in = torch.randn([batchsize, 2, 5, 5])
+    print("RAND_IN: ", rand_in)
+    print("RAND_IN SHAPE: ", rand_in.shape)
+
+    print("QUANT_MODEL: ", quant_model)
 
     quantizer = torch_quantizer(quant_mode, model, (rand_in), output_dir=quant_model)
     quantized_model = quantizer.quant_model

@@ -96,7 +96,7 @@ def make_target(target, this_path):
 
     app_path = this_path + '/application'
     target_path = this_path + '/target_' + target
-    model_path = this_path + '/compiled_model/Sequential_' + target + '.xmodel'
+    model_path = this_path + '/compiled_model/Net_' + target + '.xmodel'
 
     # remove any previous data
     shutil.rmtree(target_path, ignore_errors=True)    

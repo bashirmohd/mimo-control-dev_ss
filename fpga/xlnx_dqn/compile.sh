@@ -38,9 +38,9 @@ fi
 
 compile() {
   vai_c_xir \
-  --xmodel      $DIR/quant_model/Sequential_int.xmodel \
+  --xmodel      $DIR/quant_model/Net_int.xmodel \
   --arch        $ARCH \
-  --net_name    Sequential_${TARGET} \
+  --net_name    Net_${TARGET} \
   --output_dir  $DIR/compiled_model
 }
 

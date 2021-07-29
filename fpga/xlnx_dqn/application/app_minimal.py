@@ -43,7 +43,7 @@ def get_child_subgraph_dpu(graph: "Graph") -> List["Subgraph"]:
 
 
 def get_subgraphs():
-    g = xir.Graph.deserialize('Sequential_zcu102.xmodel')
+    g = xir.Graph.deserialize('Net_zcu102.xmodel')
     subgraphs = get_child_subgraph_dpu(g)
     return subgraphs
 
@@ -98,7 +98,7 @@ def main():
     ap = argparse.ArgumentParser()  
     ap.add_argument('-d', '--image_dir', type=str, default='images', help='Path to folder of images. Default is images')  
     ap.add_argument('-t', '--threads',   type=int, default=1,        help='Number of threads. Default is 1')
-    ap.add_argument('-m', '--model',     type=str, default='Sequential_zcu102.xmodel', help='Path of xmodel. Default is Sequential_zcu102.xmodel')
+    ap.add_argument('-m', '--model',     type=str, default='Net_zcu102.xmodel', help='Path of xmodel. Default is Net_zcu102.xmodel')
     ap.add_argument('-s', '--sample',     type=str, default='sample.npy', help='Numpy array sample. Default is sample.npy')
     ap.add_argument('-v_io', '--verbose_io',   action='store_true', help='Set to print the DPU\'s input/output. Will affect the FPS performance.')
     ap.add_argument('-v_fps', '--verbose_fps',   action='store_true', help='Set to print the DPU\'s FPS performance.')
